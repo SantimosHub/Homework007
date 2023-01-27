@@ -8,7 +8,7 @@ double[,] GetArray(int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            result[i, j] = Math.Round(rnd.NextDouble()*10, 1);
+            result[i, j] = Math.Round(rnd.NextDouble() * 10, 1);
         }
     }
     return result;
@@ -27,10 +27,10 @@ void PrintArray(double[,] inArray)
 }
 
 Console.Write("Введите количество строк массива: ");
-int rows = int.Parse(Console.ReadLine());
+int rows = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите количество столбцов массива: ");
-int columns = int.Parse(Console.ReadLine());
+int columns = Convert.ToInt32(Console.ReadLine());
 
 double[,] array = GetArray(rows, columns);
 
